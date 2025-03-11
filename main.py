@@ -76,7 +76,7 @@ PROMPT = ("You are an AI Sales Coaching Assistant that processes recorded audio 
           "customer listening time to improve engagement.\", \"Slow down the closing segment to ensure all customer "
           "objections are addressed.\", \"Integrate more open-ended questions during the needs assessment phase.\" ] }")
 
-ALLOWED_AUDIO_TYPES = ["audio/wav", "audio/mp3", "audio/aiff", "audio/aac", "audio/ogg", "audio/flac"]
+ALLOWED_AUDIO_TYPES = ["audio/wav", "audio/mp3", "audio/aiff", "audio/aac", "audio/ogg", "audio/flac", "audio/mpeg"]
 
 
 @app.post("/analyze", response_model=AnalyticsResponse)
