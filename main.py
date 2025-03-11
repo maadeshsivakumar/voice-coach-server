@@ -6,8 +6,19 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from google import genai
 from google.genai import types
 from pydantic import BaseModel
+from starlette.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = FastAPI(title="Voice Coach API",
+              description="API that provides valuable feedback for sales-rep in the audio to improve sales",
+              version="1.0.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 load_dotenv()
 
 
